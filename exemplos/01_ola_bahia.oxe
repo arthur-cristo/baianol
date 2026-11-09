@@ -1,0 +1,21 @@
+colé
+
+// Programa 1: saudação, variáveis, função, condicional e laço
+por_vida cidade = "Salvador"
+deixe visitantes = 3
+
+armengue saudar(nome) {
+  resultado `Colé, ${nome}! Bem-vindo a ` + cidade + ", viu?"
+}
+
+trocar_ideias(saudar("meu rei"))
+
+paletada i de 1 daqui_pra visitantes {
+  possa_ser (i mermo 2) {
+    trocar_ideias("Visitante", i, "chegou na paleta")
+  } lá_ele {
+    trocar_ideias("Visitante", i, "chegou de buzu")
+  }
+}
+
+tá_ligado

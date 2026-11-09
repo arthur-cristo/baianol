@@ -1,0 +1,48 @@
+colé
+
+// Programa 3: classes, herança, tratamento de erros e JSON (enrolar / desapartar)
+catiguria Conta {
+  construtor(titular, saldo) {
+    na_casa.titular = titular
+    na_casa.saldo = saldo
+  }
+
+  sacar(valor) {
+    possa_ser (valor > na_casa.saldo) {
+      chiar criatura Error("Saldo insuficiente, painho!")
+    }
+    na_casa.saldo -= valor
+    resultado na_casa.saldo
+  }
+}
+
+catiguria Poupanca primo_carnal Conta {
+  render(taxa) {
+    na_casa.saldo += na_casa.saldo * taxa
+    resultado na_casa.saldo
+  }
+}
+
+por_vida conta = criatura Poupanca("Dona Maria", 1000)
+
+dar_testa {
+  trocar_ideias("Saldo após saque:", conta.sacar(300))
+  trocar_ideias("Rendimento:", conta.render(0.1))
+  conta.sacar(5000)
+} oxente (erro) {
+  trocar_ideias("Oxente:", erro.message)
+} morreu_aí {
+  trocar_ideias("Atendimento encerrado.")
+}
+
+por_vida pacote = enrolar({
+  titular: conta.titular,
+  saldo: conta.saldo,
+  ativa: massa,
+  apelido: vazio
+})
+trocar_ideias(pacote)
+por_vida aberto = desapartar(pacote)
+trocar_ideias(aberto.titular, aberto.ativa)
+
+tá_ligado

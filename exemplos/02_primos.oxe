@@ -1,0 +1,32 @@
+colé
+
+// Programa 2: números primos com corropio (while), siga_certo (continue) e borimbora (break)
+armengue ehPrimo(n) {
+  possa_ser (n < 2) { resultado aonde }
+  deixe d = 2
+  corropio (d * d <= n) {
+    possa_ser (n % d mermo 0) { resultado aonde }
+    d++
+  }
+  resultado massa
+}
+
+deixe achados = []
+deixe n = 1
+
+corropio (massa) {
+  n++
+  possa_ser (n % 2 mermo 0 mais n num_é 2) { siga_certo }
+  possa_ser (ehPrimo(n)) { achados.push(n) }
+  possa_ser (achados.length mermo 10) { borimbora }
+}
+
+trocar_ideias("Os 10 primeiros primos:", achados.join(", "))
+
+paletada p de achados {
+  possa_ser (num (p % 2 mermo 1)) {
+    trocar_ideias("Único primo par:", p)
+  }
+}
+
+tá_ligado

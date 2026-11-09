@@ -1,0 +1,7 @@
+colé
+
+possa_ser (x > 1) {
+  console.log("oi");
+}
+
+tá_ligado

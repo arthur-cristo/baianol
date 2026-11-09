@@ -1,0 +1,21 @@
+{
+  "restaurante": "Acarajé Delícias da Bahia",
+  "cardapio": [
+    {
+      "prato": "Acarajé",
+      "preco": 12.5,
+      "disponivel": true
+    },
+    {
+      "prato": "Abará",
+      "preco": 10,
+      "disponivel": true
+    },
+    {
+      "prato": "Vatapá",
+      "preco": 18,
+      "disponivel": false
+    }
+  ],
+  "promocao": null
+}

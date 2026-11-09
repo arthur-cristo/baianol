@@ -1,0 +1,10 @@
+// Subdialeto JSON do baianol#: chaves sem aspas, aspas simples, comentários e massa/aonde/vazio
+{
+  restaurante: "Acarajé Delícias da Bahia",
+  cardapio: [
+    { prato: "Acarajé", preco: 12.5, disponivel: massa },
+    { prato: 'Abará',   preco: 10,   disponivel: massa },
+    { prato: "Vatapá",  preco: 18,   disponivel: aonde }
+  ],
+  promocao: vazio
+}
