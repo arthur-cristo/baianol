@@ -1,13 +1,34 @@
 {
-  "name": "baianol-sharp",
-  "version": "1.0.0",
-  "description": "Transpilador da linguagem baianol# (.oxe) para JavaScript/Node.js",
-  "main": "src/main.js",
-  "bin": { "baianol": "src/main.js" },
+  "name": "baianol",
+  "version": "1.0.1",
+  "description": "Transpilador da linguagem baianol# (.oxe) para JavaScript",
+  "license": "MIT",
+  "main": "src/index.js",
+  "module": "dist/baianol.mjs",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./dist/baianol.mjs",
+      "require": "./src/index.js"
+    },
+    "./exemplos/*": "./exemplos/*"
+  },
+  "bin": {
+    "baianol": "src/main.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "exemplos"
+  ],
   "scripts": {
     "start": "node src/main.js",
     "exemplos": "node src/main.js transpilar exemplos/01_ola_bahia.oxe -o exemplos/saida/01_ola_bahia.js && node src/main.js transpilar exemplos/02_primos.oxe -o exemplos/saida/02_primos.js && node src/main.js transpilar exemplos/03_conta_bancaria.oxe -o exemplos/saida/03_conta_bancaria.js && node src/main.js transpilar exemplos/04_cardapio.oxe -o exemplos/saida/04_cardapio.json",
-    "test": "node tests/testar.js"
+    "test": "node tests/testar.js",
+    "build": "esbuild src/entrada-esm.mjs --bundle --format=esm --outfile=dist/baianol.mjs",
+    "prepack": "npm run build"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
 }

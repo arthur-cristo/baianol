@@ -1,5 +1,4 @@
 'use strict';
-const vm = require('vm');
 const { ErroBaianol } = require('./utils/erros');
 const { tokenizar } = require('./lexer/lexer');
 const { anotarContexto } = require('./lexer/contexto');
@@ -17,7 +16,7 @@ function transpilar(fonte) {
 /** Rede de segurança: o JS gerado precisa compilar no Node, senão é erro do baianol#. */
 function conferirJs(js) {
   try {
-    new vm.Script(`(function () {${js}\n})`);
+    new Function(js);   // só compila, não roda
   } catch (e) {
     throw new ErroBaianol(`O comando não faz sentido em baianol# (o JS gerado não compila: ${e.message})`);
   }
