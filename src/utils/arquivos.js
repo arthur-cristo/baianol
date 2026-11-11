@@ -6,7 +6,7 @@ const { ErroBaianol } = require('./erros');
 const EXTENSAO = '.oxe';
 
 function lerArquivoOxi(caminho) {
-  if (!caminho) throw new ErroBaianol('Cadê o arquivo, meu rei? Informe um arquivo .oxe');
+  if (!caminho) throw new ErroBaianol('Cadê o arquivo? Informe um arquivo .oxe');
   if (path.extname(caminho).toLowerCase() !== EXTENSAO) {
     throw new ErroBaianol(`Arquivo "${caminho}" não é baianol#: a extensão tem que ser ${EXTENSAO}`);
   }

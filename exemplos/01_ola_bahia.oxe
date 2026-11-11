@@ -8,7 +8,7 @@ armengue saudar(nome) {
   resultado `Colé, ${nome}! Bem-vindo a ` + cidade + ", viu?"
 }
 
-trocar_ideias(saudar("meu rei"))
+trocar_ideias(saudar("Maria"))
 
 paletada i de 1 daqui_pra visitantes {
   possa_ser (i mermo 2) {

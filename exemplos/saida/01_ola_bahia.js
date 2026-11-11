@@ -7,7 +7,7 @@ function saudar(nome) {
   return `Colé, ${nome}! Bem-vindo a ` + cidade + ", viu?";
 }
 
-console.log(saudar("meu rei"));
+console.log(saudar("Maria"));
 
 for (let i = 1; i <= visitantes; i++) {
   if (i === 2) {

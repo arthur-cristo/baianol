@@ -30,7 +30,7 @@ armengue saudar(nome) {
 
 paletada i de 1 daqui_pra visitantes {
   possa_ser (i mermo 2) {
-    trocar_ideias(saudar("meu rei"))
+    trocar_ideias(saudar("olá"))
   } lá_ele {
     trocar_ideias("oi")
   }
